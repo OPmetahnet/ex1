@@ -1,6 +1,6 @@
 /******************
 Name:
-ID:
+ID: 212320733
 Assignment:
 *******************/
 #include <stdio.h>
@@ -13,6 +13,19 @@ int main() {
   printf("What bit:\n");
   /*Scan two integers (representing number and a position)
   Print the bit in this position. */
+  int number, position;
+
+  printf("Please enter a number:\n");
+  scanf("%d", &number);
+
+  printf("Please enter a position:\n");
+  scanf("%d", &position);
+
+  //isolating our bit and on the right then performing & 1 to check it individualy
+  int check_bit = number >> position;
+  check_bit = check_bit & 1;
+
+  printf("The bit in position %d of number %d is: %d\n", position, number, check_bit);
   
   // Set bit
   printf("\nSet bit:\n");
