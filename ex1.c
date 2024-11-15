@@ -73,6 +73,13 @@ int main() {
   /* Scan an integer
   If the number is even - print 1, else - print 0. */
   
+  printf("Please enter a number:\n");
+  scanf("%d", &number);//reusing number for memory efficiency
+
+  //isolating the rightmost bit, which represents 1(odd if on) and flipping it
+  number = 1 - (number & 1);
+  printf("%d\n", number);
+  
   // 3, 5, 7, 11
   printf("\n3, 5, 7, 11:\n");
   /* Scan two integers in octal base
