@@ -35,6 +35,23 @@ int main() {
   Now make sure it's "off" (equal to 0)
   Print the output */
 
+  printf("Please enter a number:\n");
+  scanf("%d", &number);//reusing our number variable for memory efficiency
+
+  int temp = number;//saving the number for the second part calculation
+
+  printf("Please enter a position:\n");
+  scanf("%d", &position);//reusing our position variable for memory efficiency
+
+  int set_bit = 1 << position;//isolation of the open bit at the chosen position
+  number = number | set_bit;//turning on the bit at the position we chose
+  printf("Number with bit %d set to 1: %d\n", position, number);
+
+  set_bit = ~set_bit;//flipping the bits in order to turn off the bit we chose
+  temp = temp & set_bit;
+
+  printf("Number with bit %d set to 0: %d\n", position, temp);
+
   // Toggle bit
   printf("\nToggle bit:\n");
   /*Scan two integers (representing number and a position)
