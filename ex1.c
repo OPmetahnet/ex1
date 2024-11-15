@@ -57,6 +57,16 @@ int main() {
   /*Scan two integers (representing number and a position)
   Toggle the bit in this position
   Print the new number */
+  printf("Please enter a number:\n");
+  scanf("%d", &number);//reusing number for memory efficiency
+
+  printf("Please enter a position:\n");
+  scanf("%d", &position);//reusing position for memory efficiency
+
+  set_bit = 1 << position;
+  number = number ^ set_bit;//toggling like this works since 0^0=0, 1^0=1
+
+  printf("Number with bit %d toggled: %d\n", position, number);
   
   // Even - Odd
   printf("\nEven - Odd:\n");
