@@ -67,12 +67,12 @@ int main() {
   number = number ^ set_bit;//toggling like this works since 0^0=0, 1^0=1
 
   printf("Number with bit %d toggled: %d\n", position, number);
-  
+
   // Even - Odd
   printf("\nEven - Odd:\n");
   /* Scan an integer
   If the number is even - print 1, else - print 0. */
-  
+
   printf("Please enter a number:\n");
   scanf("%d", &number);//reusing number for memory efficiency
 
@@ -87,15 +87,15 @@ int main() {
   Print only 4 bits, in positions: 3,5,7,11 in the result. */
   int number1, number2;
 
-  printf("Please enter the first number:\n");
+  printf("Please enter the first number (octal):\n");
   scanf("%o", &number1);//getting a number in octal base
 
-  printf("please enter the second number:\n");
+  printf("Please enter the second number (octal):\n");
   scanf("%o", &number2);
 
   //summation of both numbers, followed by its printing in upper case hex base(0x)
   int sum = number1 + number2;
-  printf("The sum in hexadecimal is %X\n", sum);
+  printf("The sum in hexadecimal: %X\n", sum);
 
   //not using \n in order to be able to print each bit separately
   printf("The 3,5,7,11 bits are: ");
@@ -117,6 +117,6 @@ int main() {
   printf("%d\n", bit_to_print);
 
   printf("Bye!\n");
-  
+
   return 0;
 }
